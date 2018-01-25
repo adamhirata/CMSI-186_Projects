@@ -1,3 +1,9 @@
+/**==========================
+  *Name: Adam Hirata
+  *Date submitted: 1/25/18
+  *Last edit on  : 1/25/18
+  */
+
 public class CountTheDays {
    
    /** The main method of CountTheDays will output the number of days between the input dates
