@@ -151,22 +151,6 @@ public class CalendarStuff {
       return 0;
    }
 
-/*    switch ( yearCompare ) {
-         case ( year1 > year2 ) : return 1;
-         case ( year1 < year2 ) : return -1;
-         default: 
-            switch ( monthCompare ) {
-               case ( month1 > month2 ) : return 1;
-               case ( month1 < month2 ) : return -1;
-               default:
-                  switch ( dayCompare ) {
-                     case ( day1 > day2 ) : return 1;
-                     case ( day1 < day2 ) : return -1;
-                  }
-            }
-      }
-   }*/
-
   /**
    * A method to return whether a date is a valid date
    * @param    month long    containing month number, starting with "1" for "January"
