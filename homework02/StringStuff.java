@@ -171,26 +171,67 @@ public class StringStuff {
    * @param args String array containing command line parameters
    */
    public static void main(String args[]) {
-      String blah = new String("Blah blah blah");
-      String woof = new String("BCDBCDBCDBCDBCD");
+      String vowels1  = new String("Hello");
+      String vowels2  = new String("HEllO");
+      String noVowels = new String("c4n't vnd3rst4nd th1s");
+      String testForY = new String("why");
       String pal1 = new String("a");
-      String pal2 = new String("ab");
-      String pal3 = new String("aba");
-      String pal4 = new String("amanaplanacanalpanama");
-      String pal5 = new String("abba");
-      System.out.println(containsVowel(blah));
-      System.out.println(containsVowel(woof));
-      System.out.println(isPalindrome(pal1));
-      System.out.println(isPalindrome(pal2));
-      System.out.println(isPalindrome(pal3));
-      System.out.println(isPalindrome(pal4));
-      System.out.println(isPalindrome(pal5));
-      System.out.println("evensOnly()        returns: " + evensOnly("REHEARSALSZ"));
-      System.out.println("evensOnly()        returns: " + evensOnly("REhearSALsz"));
-      System.out.println("evensOnlyNoDupes() returns: " + evensOnlyNoDupes("REhearSALsz"));
-      System.out.println("oddsOnly()         returns: " + oddsOnly("xylophones"));
-      System.out.println("oddsOnly()         returns: " + oddsOnly("XYloPHonES"));
-      System.out.println("oddsOnlyNoDupes()  returns: " + oddsOnlyNoDupes("XYloPHonES"));
-      System.out.println("reverse()          returns: " + reverse("REHEARSALSZ"));
+      String pal2 = new String("adam");
+      String pal3 = new String("madamimadam");
+      String pal4 = new String("appa");
+      System.out.println("\n==========================\nTests for StringStuff.java\n==========================\n");
+      
+      //tests for containsVowel
+      
+      System.out.println("=== Tests for containsVowel ===\n");
+      System.out.println("Input: \"Hello\"                 Should return: true.  Result: " + containsVowel(vowels1));
+      System.out.println("Input: \"HEllO\"                 Should return: true.  Result: " + containsVowel(vowels2));
+      System.out.println("Input: \"c4n't vnd3rst4nd th1s\" Should return: false. Result: " + containsVowel(noVowels));
+      System.out.println("Input: \"why\"                   Should return: true.  Result: " + containsVowel(testForY));
+      
+      //tests for isPalindrome
+      
+      System.out.println("\n=== Tests for isPalindrome ===\n");
+      System.out.println("Input: \"a\"                     Should return: true.  Result: " + isPalindrome(pal1));
+      System.out.println("Input: \"adam\"                  Should return: false. Result: " + isPalindrome(pal2));
+      System.out.println("Input: \"12345678987654321\"     Should return: true.  Result: " + isPalindrome("12345678987654321"));
+      System.out.println("Input: \"123445432\"             Should return: false. Result: " + isPalindrome("123445432"));
+      System.out.println("Input: \"madamimadam\"           Should return: true.  Result: " + isPalindrome(pal3));
+      System.out.println("Input: \"appa\"                  Should return: true.  Result: " + isPalindrome(pal1));
+
+      //tests for evensOnly
+
+      System.out.println("\n=== Tests for evensOnly ===\n");
+      System.out.println("Input: \"acegikmoqsuwyACEGIKMOQSUWY\" Should return:                  Returns: " + evensOnly("acegikmoqsuwyACEGIKMOQSUWY"));
+      System.out.println("Input: \"aaAbbBccCddDeeEffF\"         Should return: bbBddDffF        Returns: " + evensOnly("aaAbbBccCddDeeEffF"));
+      System.out.println("Input: \"Adam Is My Name\"            Should return: dN               Returns: " + evensOnly("Adam Is My Name"));
+      
+      //tests for evensOnlyNoDupes
+      
+      System.out.println("\n=== Tests for evensOnlyNoDupes ===\n");
+      System.out.println("Input: \"acegikmoqsuwyACEGIKMOQSUWY\" Should return:                  Returns: " + evensOnlyNoDupes("acegikmoqsuwyACEGIKMOQSUWY"));
+      System.out.println("Input: \"aaAbbBccCddDeeEffF\"         Should return: bBdDfF           Returns: " + evensOnlyNoDupes("aaAbbBccCddDeeEffF"));
+      System.out.println("Input: \"Adam Is My Name\"            Should return: dN               Returns: " + evensOnlyNoDupes("Adam Is My Name"));
+      
+      //tests for oddsOnly
+      
+      System.out.println("\n=== Tests for oddsOnly ===\n");
+      System.out.println("Input: \"bdfhjlnprtvxzBDFHJLNPRTVXZ\" Should return:                  Returns: " + oddsOnly("bdfhjlnprtvxzBDFHJLNPRTVXZ"));
+      System.out.println("Input: \"aaAbbBccCddDeeEffF\"         Should return: aaAccCeeE        Returns: " + oddsOnly("aaAbbBccCddDeeEffF"));
+      System.out.println("Input: \"Adam Is My Name\"            Should return: AamIsMyame       Returns: " + oddsOnly("Adam Is My Name"));
+      
+      //tests for oddsOnlyNoDupes
+      
+      System.out.println("\n=== Tests for oddsOnlyNoDupes ===\n");
+      System.out.println("Input: \"bdfhjlnprtvxzBDFHJLNPRTVXZ\" Should return:                  Returns: " + oddsOnlyNoDupes("bdfhjlnprtvxzBDFHJLNPRTVXZ"));
+      System.out.println("Input: \"aaAbbBccCddDeeEffF\"         Should return: aAcCeE           Returns: " + oddsOnlyNoDupes("aaAbbBccCddDeeEffF"));
+      System.out.println("Input: \"Adam Is My Name\"            Should return: AamIsMye         Returns: " + oddsOnlyNoDupes("Adam Is My Name"));
+      
+      //tests for reverse
+      
+      System.out.println("\n=== Tests for reverse ===\n");
+      System.out.println("Input: \"tset a si sihT\"             Should return: This is a test   Returns: " + reverse("tset a si sihT"));
+      System.out.println("Input: \"esrever\"                    Should return: reverse          Returns: " + reverse("esrever"));
+      System.out.println("Input: \"Adam Is My Name\"            Should return: emaN yM sI madA  Returns: " + reverse("Adam Is My Name"));
    }
 }
