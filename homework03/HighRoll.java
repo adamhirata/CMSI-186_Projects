@@ -7,7 +7,7 @@
   Description:  A program with the public
                 class HighRoll that emulates
                 a dice game.
-  Last Edit:
+  Last Edit:    2/21/18
   
 ===========================================*/
 
