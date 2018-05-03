@@ -2,7 +2,7 @@
  *  File Name     :  DynamicChangeMaker.java
  *  Description   :  Has a method which creates the optimal number of
  *                   coins to make the desired amount of change
- *  @author       :  Adam Hirata (UID: 956306941
+ *  @author       :  Adam Hirata (UID: 956306941)
  *  Date Created  :  04/26/18
  *  Last Edited   :  05/03/18
  *  Notes         :  None
